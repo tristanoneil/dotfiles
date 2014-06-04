@@ -30,3 +30,6 @@
 
 [branch]
   autosetuprebase = always
+
+[credential]
+  helper = osxkeychain

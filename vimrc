@@ -26,6 +26,8 @@ set listchars+=trail:. " display trailing spaces as dots
 """ base16 color settings
 colorscheme Tomorrow-Night
 
+let g:airline_powerline_fonts = 1
+
 """ strip trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
 

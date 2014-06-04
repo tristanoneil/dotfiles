@@ -24,8 +24,7 @@ set listchars+=tab:\ \
 set listchars+=trail:. " display trailing spaces as dots
 
 """ base16 color settings
-set background=dark
-colorscheme base16-default
+colorscheme Tomorrow-Night
 
 """ strip trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e

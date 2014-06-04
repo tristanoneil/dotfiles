@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git osx)
+plugins=(git osx terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 

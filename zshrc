@@ -17,4 +17,6 @@ export PATH="$HOME/go/bin:$PATH"
 
 export GOPATH=$HOME/go
 
+export EDITOR=vim
+
 chruby 2.0.0

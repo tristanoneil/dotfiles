@@ -48,3 +48,7 @@ endif
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+
+let EasyGrepRecursive = 1
+let EasyGrepCommand = 1
+let EasyGrepFilesToExclude = '*.git/*,*bower_components/*,*node_modules/*,*.sassc'

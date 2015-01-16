@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "vim/bundle/easygrep"]
+	path = vim/bundle/easygrep
+	url = git@github.com:vim-scripts/EasyGrep.git

@@ -6,7 +6,7 @@ plugins=(git osx terminalapp)
 
 source $ZSH/oh-my-zsh.sh
 
-alias dev="cd /Users/Tristan/Documents/Development"
+alias dev="cd ~/src"
 alias s="clear && git status"
 
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -38,3 +38,5 @@ alias tstart='/Applications/tomcat/bin/startup.sh'
 alias tstop='/Applications/tomcat/bin/shutdown.sh'
 alias mycw_mem='memcached -u memcached  -m 512 -l 127.0.0.1 -p 11211'
 alias antlog='ant; tstop; tstart; tail -f /Applications/tomcat/logs/catalina.out'
+alias flush='echo "flush_all" | nc localhost 11211'
+alias restart='sudo /usr/sbin/apachectl restart'

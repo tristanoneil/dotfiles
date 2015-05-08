@@ -31,5 +31,11 @@
 [branch]
   autosetuprebase = always
 
-[credential]
-  helper = osxkeychain
+[alias]
+  cleanup = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[merge]
+  tool = opendiff
+
+[rerere]
+  enabled = true

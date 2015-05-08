@@ -4,7 +4,7 @@
 dir=~/dotfiles
 
  # list of files/folders to symlink in homedir
-files="vim gemrc gitconfig gitignore_global vimrc zshrc"
+files="vim gemrc gitconfig gitignore_global vimrc config"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"

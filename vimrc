@@ -1,3 +1,6 @@
+""" use bash
+set shell=bash
+
 """ enable pathogen
 execute pathogen#infect()
 
@@ -12,6 +15,8 @@ set ruler " show line number and column in the status line
 set backspace=indent,eol,start " allow backspace
 set autoindent " autoindents code
 let g:ctrlp_show_hidden = 1 " show hidden files in ctrl p
+set autoread " auto reload changed files
+set clipboard=unnamed " share clipboard with vim
 
 filetype plugin indent on
 
@@ -36,7 +41,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 """ ignore some files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ Use AG
 if executable('ag')
@@ -49,6 +54,14 @@ autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead Berksfile set filetype=ruby
 
-let EasyGrepRecursive = 1
-let EasyGrepCommand = 1
-let EasyGrepFilesToExclude = '*.git/*,*bower_components/*,*node_modules/*,*.sassc'
+""" Autopaste
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction

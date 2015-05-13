@@ -5,7 +5,8 @@
 [core]
   quotepath = false
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = /Users/Tristan/.gitignore_global
+  excludesfile = /Users/tristanoneil/.gitignore_global
+  editor = /usr/local/bin/vim
 
 [color]
   ui = true

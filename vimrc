@@ -1,8 +1,17 @@
 """ use bash
 set shell=bash
 
-""" enable pathogen
-execute pathogen#infect()
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim'
+
+call vundle#end()
 
 set nocompatible " vim not vi!
 syntax enable " enable syntax highlighting

@@ -1,4 +1,6 @@
 vim/.netrwhist
 vim/vim
+vim/bundle
 config/fish/fish_history
 config/fish/fishd*
+config/configstore

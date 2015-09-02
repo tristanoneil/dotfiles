@@ -13,6 +13,8 @@ chruby ruby-2.1.6
 source ~/.config/fish/functions/git.fish
 source ~/.config/fish/functions/weather.fish
 
+set -gx PATH $HOME/go/bin $PATH
+set -gx GOPATH $HOME/go
 function fish_prompt
   if test -d .git
     printf '%s%s%s:%s> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)

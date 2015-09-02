@@ -10,6 +10,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()

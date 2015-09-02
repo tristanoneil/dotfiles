@@ -8,7 +8,7 @@ alias flush='echo "flush_all" | nc localhost 11211'
 source /usr/local/share/chruby/chruby.fish
 source /usr/local/share/chruby/auto.fish
 
-chruby ruby-2.2.0
+chruby ruby-2.1.6
 
 source ~/.config/fish/functions/git.fish
 source ~/.config/fish/functions/weather.fish

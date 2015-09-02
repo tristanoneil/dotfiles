@@ -8,3 +8,4 @@ These be my dotfiles, they may not be perfect but they're _my_ dotfiles.
 0. `git clone --recursive git@github.com:tristanoneil/dotfiles.git`
 0. `cd dotfiles`
 0. `./install.sh`
+0. `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`

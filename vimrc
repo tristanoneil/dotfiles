@@ -10,6 +10,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
@@ -38,7 +39,8 @@ set listchars+=tab:\ \
 set listchars+=trail:. " display trailing spaces as dots
 
 """ base16 color settings
-colorscheme Tomorrow-Night
+let base16colorspace=256
+colorscheme base16-ocean
 
 let g:airline_powerline_fonts = 1
 

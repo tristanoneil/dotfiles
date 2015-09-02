@@ -4,3 +4,4 @@ vim/bundle
 config/fish/fish_history
 config/fish/fishd*
 config/configstore
+config/base16-shell

@@ -15,6 +15,9 @@ source ~/.config/fish/functions/weather.fish
 
 set -gx PATH $HOME/go/bin $PATH
 set -gx GOPATH $HOME/go
+
+eval sh $HOME/.config/base16-shell/base16-ocean.dark.sh
+
 function fish_prompt
   if test -d .git
     printf '%s%s%s:%s> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)

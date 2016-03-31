@@ -1,0 +1,2 @@
+screenshot_and_open_image
+save_and_open_page

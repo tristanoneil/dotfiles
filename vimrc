@@ -1,5 +1,5 @@
 """ use bash
-set shell=bash
+set shell=bash\ --login
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,6 +14,13 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'chriskempson/base16-vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'isRuslan/vim-es6'
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-scripts/bats.vim'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
@@ -41,10 +48,10 @@ set listchars="" " reset list chars
 set listchars+=tab:\ \
 set listchars+=trail:. " display trailing spaces as dots
 
-""" base16 color settings
+""" color settings
 let base16colorspace=256
+set background=dark
 colorscheme base16-ocean
-
 let g:airline_powerline_fonts = 1
 
 """ strip trailing whitespace automatically
@@ -79,3 +86,24 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+""" Add some additional autocomplete keywords
+set complete+=k~/.vim/keywords.txt
+
+""" Disable quote concealing in JSON
+let g:vim_json_syntax_conceal = 0
+
+set autoread
+augroup checktime
+    au!
+    if !has("gui_running")
+        "silent! necessary otherwise throws errors when using command
+        "line window.
+        autocmd BufEnter        * silent! checktime
+        autocmd CursorHold      * silent! checktime
+        autocmd CursorHoldI     * silent! checktime
+        "these two _may_ slow things down. Remove if they do.
+        autocmd CursorMoved     * silent! checktime
+        autocmd CursorMovedI    * silent! checktime
+    endif
+augroup END

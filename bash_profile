@@ -28,3 +28,6 @@ export PATH="$HOME/go/bin:$PATH"
 # rvm
 
 . $HOME/.rvm/scripts/rvm
+
+# nvm
+source $HOME/.nvm/nvm.sh

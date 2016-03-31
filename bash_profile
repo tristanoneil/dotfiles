@@ -24,3 +24,7 @@ sh $HOME/.base16-ocean.dark.sh
 
 export GOPATH=~/go
 export PATH="$HOME/go/bin:$PATH"
+
+# rvm
+
+. $HOME/.rvm/scripts/rvm

@@ -18,13 +18,13 @@ wget https://raw.githubusercontent.com/chriskempson/base16-shell/master/base16-o
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sudo chsh -s $(which zsh) vagrant
+. ~/.zshrc
 
 # create custom zsh themes dir
 mkdir $ZSH_CUSTOM/themes
-
-# source zshrc
-. ~/.zshrc
 
 # download zsh lambda theme
 wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme -O $ZSH_CUSTOM/themes/lambda-mod.zsh-theme

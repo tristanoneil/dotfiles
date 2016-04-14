@@ -23,6 +23,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # create custom zsh themes dir
 mkdir $ZSH_CUSTOM/themes
 
+# source zshrc
+. ~/.zshrc
+
 # download zsh lambda theme
 wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme -O $ZSH_CUSTOM/themes/lambda-mod.zsh-theme
 

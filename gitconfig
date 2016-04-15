@@ -40,3 +40,6 @@
 
 [rerere]
   enabled = true
+
+[credential]
+  helper = store

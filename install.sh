@@ -17,9 +17,6 @@ wget https://raw.githubusercontent.com/chriskempson/base16-shell/master/base16-o
 # download vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# install vundle plugins
-vim +PluginInstall +qall
-
 # install oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 sudo chsh -s $(which zsh) vagrant
@@ -36,3 +33,6 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
+
+# install vundle plugins
+vim +PluginInstall +qall

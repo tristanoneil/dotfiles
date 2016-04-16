@@ -20,6 +20,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/bats.vim'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -36,6 +38,7 @@ set autoindent " autoindents code
 let g:ctrlp_show_hidden = 1 " show hidden files in ctrl p
 set autoread " auto reload changed files
 set clipboard=unnamed " share clipboard with vim
+set noshowmode " hide --INSERT--, --REPLACE-- etc.
 
 filetype plugin indent on
 
@@ -51,6 +54,10 @@ set listchars+=trail:. " display trailing spaces as dots
 let base16colorspace=256
 set background=dark
 colorscheme base16-ocean
+let g:airline_theme='base16'
+
+""" fonts
+let g:airline_powerline_fonts = 1
 
 """ strip trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
@@ -91,17 +98,15 @@ set complete+=k~/.vim/keywords.txt
 """ Disable quote concealing in JSON
 let g:vim_json_syntax_conceal = 0
 
-set autoread
-augroup checktime
-    au!
-    if !has("gui_running")
-        "silent! necessary otherwise throws errors when using command
-        "line window.
-        autocmd BufEnter        * silent! checktime
-        autocmd CursorHold      * silent! checktime
-        autocmd CursorHoldI     * silent! checktime
-        "these two _may_ slow things down. Remove if they do.
-        autocmd CursorMoved     * silent! checktime
-        autocmd CursorMovedI    * silent! checktime
-    endif
-augroup END
+let g:ctrlp_buffer_func = {
+    \ 'enter': 'Function_Name_1',
+    \ 'exit':  'Function_Name_2',
+    \ }
+
+func! Function_Name_1()
+    set laststatus=0
+endfunc
+
+func! Function_Name_2()
+    set laststatus=2
+endfunc

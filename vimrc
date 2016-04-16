@@ -7,7 +7,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'elixir-lang/vim-elixir'
@@ -52,7 +51,6 @@ set listchars+=trail:. " display trailing spaces as dots
 let base16colorspace=256
 set background=dark
 colorscheme base16-ocean
-let g:airline_powerline_fonts = 1
 
 """ strip trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e

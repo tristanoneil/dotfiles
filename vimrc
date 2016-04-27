@@ -22,6 +22,7 @@ Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -50,15 +51,6 @@ set listchars="" " reset list chars
 set listchars+=tab:\ \
 set listchars+=trail:. " display trailing spaces as dots
 
-""" color settings
-let base16colorspace=256
-set background=dark
-colorscheme base16-ocean
-let g:airline_theme='base16'
-
-""" fonts
-let g:airline_powerline_fonts = 1
-
 """ strip trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -68,6 +60,12 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 """ ignore some files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
+
+""" colors
+colorscheme Tomorrow-Night
+
+""" fonts
+let g:airline_powerline_fonts = 1
 
 """ Use AG
 if executable('ag')

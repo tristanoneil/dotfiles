@@ -3,5 +3,8 @@ vim/vim
 vim/bundle
 config/fish/fish_history
 config/fish/fishd*
+config/fisherman
+config/fish/completions
+config/fish/functions
 config/configstore
 config/base16-shell

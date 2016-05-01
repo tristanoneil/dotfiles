@@ -63,6 +63,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ colors
 colorscheme Tomorrow-Night
+set background=dark
+set t_Co=256
 
 """ fonts
 let g:airline_powerline_fonts = 1

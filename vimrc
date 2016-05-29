@@ -12,9 +12,9 @@ Plugin 'slim-template/vim-slim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'chriskempson/base16-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/bats.vim'
@@ -23,8 +23,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'rust-lang/rust.vim'
+Plugin 'leafo/moonscript-vim'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
+
+let g:go_fmt_command = "goimports"
 
 set nocompatible " vim not vi!
 syntax enable " enable syntax highlighting
@@ -110,3 +115,11 @@ endfunc
 func! Function_Name_2()
     set laststatus=2
 endfunc
+
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+""" vim-rspec mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>

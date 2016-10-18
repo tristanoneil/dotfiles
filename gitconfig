@@ -15,7 +15,6 @@
   current = yellow black
   local = yellow
   remote = magenta
-
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
@@ -43,3 +42,6 @@
 
 [credential]
   helper = store
+
+[rebase]
+  autosquash = true

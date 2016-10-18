@@ -116,7 +116,7 @@ func! Function_Name_2()
     set laststatus=2
 endfunc
 
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("orca rspec {spec}\n")'
 
 """ vim-rspec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

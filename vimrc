@@ -9,7 +9,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'mxw/vim-jsx'
@@ -21,8 +20,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'rust-lang/rust.vim'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
 Plugin 'janko-m/vim-test'
 
 call vundle#end()
@@ -102,9 +102,9 @@ set complete+=k~/.vim/keywords.txt
 let g:vim_json_syntax_conceal = 0
 
 let g:ctrlp_buffer_func = {
-    \ 'enter': 'Function_Name_1',
-    \ 'exit':  'Function_Name_2',
-    \ }
+  \ 'enter': 'Function_Name_1',
+  \ 'exit': 'Function_Name_2'
+\ }
 
 func! Function_Name_1()
     set laststatus=0

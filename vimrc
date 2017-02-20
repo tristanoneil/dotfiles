@@ -13,8 +13,6 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'mxw/vim-jsx'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/bats.vim'
@@ -26,6 +24,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'fatih/vim-go'
+Plugin 'janko-m/vim-test'
 
 call vundle#end()
 
@@ -116,10 +115,6 @@ func! Function_Name_2()
     set laststatus=2
 endfunc
 
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-
-""" vim-rspec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+""" vim-test mappings
+nmap <silent> <leader>s :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>

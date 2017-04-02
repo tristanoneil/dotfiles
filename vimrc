@@ -1,6 +1,5 @@
 """ use bash
 set shell=bash\ --login
-
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -17,8 +16,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/bats.vim'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
@@ -66,11 +63,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ colors
 colorscheme Tomorrow-Night
-set background=dark
 set t_Co=256
-
-""" fonts
-let g:airline_powerline_fonts = 1
+hi Normal ctermbg=none
+hi StatusLine cterm=none ctermbg=none ctermfg=white
+hi StatusLineNC cterm=none ctermbg=none
+hi VertSplit ctermbg=none
+hi Pmenu ctermfg=white ctermbg=8 cterm=none
+hi PmenuSel ctermfg=none ctermbg=none cterm=none
+set fillchars=stl:—,stlnc:—,vert:│
 
 """ Use AG
 if executable('ag')

@@ -5,22 +5,26 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'mxw/vim-jsx'
 Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/bats.vim'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
 Plugin 'janko-m/vim-test'
+Plugin 'djoshea/vim-autoread'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
@@ -37,6 +41,7 @@ set ruler " show line number and column in the status line
 set backspace=indent,eol,start " allow backspace
 set autoindent " autoindents code
 let g:ctrlp_show_hidden = 1 " show hidden files in ctrl p
+let g:ctrlp_custom_ignore = '.git\|cassettes'
 set autoread " auto reload changed files
 set clipboard=unnamed " share clipboard with vim
 set noshowmode " hide --INSERT--, --REPLACE-- etc.
@@ -68,20 +73,13 @@ hi Normal ctermbg=none
 hi StatusLine cterm=none ctermbg=none ctermfg=white
 hi StatusLineNC cterm=none ctermbg=none
 hi VertSplit ctermbg=none
-hi Pmenu ctermfg=white ctermbg=8 cterm=none
-hi PmenuSel ctermfg=none ctermbg=none cterm=none
+hi Pmenu ctermfg=white ctermbg=none cterm=none
+hi PmenuSel ctermfg=11 ctermbg=none cterm=none
 set fillchars=stl:—,stlnc:—,vert:│
-
-""" Use AG
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 """ Set syntax highlighting for non-ruby ruby files
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
-autocmd BufNewFile,BufRead Berksfile set filetype=ruby
 
 """ Autopaste
 let &t_SI .= "\<Esc>[?2004h"
@@ -95,25 +93,19 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
-""" Add some additional autocomplete keywords
-set complete+=k~/.vim/keywords.txt
-
 """ Disable quote concealing in JSON
 let g:vim_json_syntax_conceal = 0
-
-let g:ctrlp_buffer_func = {
-  \ 'enter': 'Function_Name_1',
-  \ 'exit': 'Function_Name_2'
-\ }
-
-func! Function_Name_1()
-    set laststatus=0
-endfunc
-
-func! Function_Name_2()
-    set laststatus=2
-endfunc
 
 """ vim-test mappings
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
+
+""" configure specs to run in orca
+let test#ruby#rspec#executable = 'orca run bundle exec bin/rspec'
+
+set splitbelow
+set splitright
+
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type cterm=italic

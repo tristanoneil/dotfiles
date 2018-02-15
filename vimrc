@@ -100,12 +100,13 @@ let g:vim_json_syntax_conceal = 0
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
 
-""" configure specs to run in orca
-let test#ruby#rspec#executable = 'orca run bundle exec bin/rspec'
-
 set splitbelow
 set splitright
 
 hi htmlArg cterm=italic
 hi Comment cterm=italic
 hi Type cterm=italic
+
+set dictionary+=~/.vimwords
+set complete+=k
+let g:jsx_ext_required = 0

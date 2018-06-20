@@ -24,11 +24,11 @@ Plugin 'janko-m/vim-test'
 Plugin 'djoshea/vim-autoread'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-commentary'
-Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
-let g:go_fmt_command = "goimports"
+set rtp+=/usr/local/opt/fzf
+nnoremap <c-p> :Files<cr>
 
 set nocompatible " vim not vi!
 syntax enable " enable syntax highlighting
@@ -40,8 +40,6 @@ set expandtab " use spaces when pressing tab
 set ruler " show line number and column in the status line
 set backspace=indent,eol,start " allow backspace
 set autoindent " autoindents code
-let g:ctrlp_show_hidden = 1 " show hidden files in ctrl p
-let g:ctrlp_custom_ignore = '.git\|cassettes'
 set autoread " auto reload changed files
 set clipboard=unnamed " share clipboard with vim
 set noshowmode " hide --INSERT--, --REPLACE-- etc.

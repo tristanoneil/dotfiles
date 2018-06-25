@@ -15,6 +15,7 @@
   current = yellow black
   local = yellow
   remote = magenta
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
@@ -41,7 +42,7 @@
   enabled = true
 
 [credential]
-  helper = store
+  helper = osxkeychain
 
 [rebase]
   autosquash = true

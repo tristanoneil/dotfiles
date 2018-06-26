@@ -1,10 +1,9 @@
-vim/.netrwhist
-vim/vim
-vim/bundle
+config/configstore
+config/fish/completions
 config/fish/fish_history
 config/fish/fishd*
-config/fisherman
-config/fish/completions
 config/fish/functions
-config/configstore
-config/base16-shell
+config/fisherman
+vim/.netrwhist
+vim/bundle
+vim/vim

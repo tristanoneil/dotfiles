@@ -68,7 +68,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ colors
-colorscheme Tomorrow-Night
+silent! colorscheme Tomorrow-Night
 hi Normal ctermbg=none
 hi Pmenu ctermfg=white ctermbg=none cterm=none
 hi PmenuSel ctermfg=11 ctermbg=none cterm=none

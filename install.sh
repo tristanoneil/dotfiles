@@ -28,4 +28,4 @@ fish config/fish/functions/fisher.fish
 fisher up
 
 # install vundle plugins
-vim +PluginInstall +qall
+vim +PlugInstall +qall

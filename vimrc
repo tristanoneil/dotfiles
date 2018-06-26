@@ -1,38 +1,41 @@
-""" use bash
-set shell=bash\ --login
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+""" use bash set shell=bash\ --login
 
-Plugin 'Yggdroot/indentLine'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'djoshea/vim-autoread'
-Plugin 'elzr/vim-json'
-Plugin 'fatih/vim-go'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'isRuslan/vim-es6'
-Plugin 'janko-m/vim-test'
-Plugin 'junegunn/fzf.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rust-lang/rust.vim'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/bats.vim'
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+
+Plug 'Yggdroot/indentLine'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'djoshea/vim-autoread'
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
+Plug 'flazz/vim-colorschemes'
+Plug 'gmarik/Vundle.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'isRuslan/vim-es6'
+Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/bats.vim'
+
+call plug#end()
 
 """ use fzf and map it to ctrl + p
 set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :Files<cr>
 
-filetype plugin indent on
 set autoindent " autoindents code
 set autoread " auto reload changed files
 set backspace=indent,eol,start " allow backspace

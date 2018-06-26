@@ -14,9 +14,6 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# download vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
   echo "Creating symlink to $file in home directory."

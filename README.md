@@ -11,6 +11,7 @@ These be my dotfiles, they may not be perfect but they're _my_ dotfiles.
 
 ## Setup iTerm
 
-0. Import Purple.itermcolors
+0. Import com.googlecode.iterm2.plist by going to General and checking "Load
+   preferences from a custom folder or URL"
 0. Run `tic xterm-256color-italic.terminfo` and then manually set this as the
    reporting terminal.

@@ -27,6 +27,7 @@ Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
+""" use fzf and map it to ctrl + p
 set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :Files<cr>
 

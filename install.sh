@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# mv .config directory if there already is one
+mv ~/.config ~/.config-bak
+
 # dotfiles directory
 dir=~/dotfiles
 
  # list of files/folders to symlink in homedir
-files="vim gemrc gitconfig gitignore_global vimrc tmux.conf config"
+files="vim gitconfig gitignore_global vimrc config"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"

@@ -8,33 +8,24 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Yggdroot/indentLine'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'djoshea/vim-autoread'
-Plug 'elzr/vim-json'
-Plug 'fatih/vim-go'
-Plug 'flazz/vim-colorschemes'
-Plug 'gmarik/Vundle.vim'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'isRuslan/vim-es6'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'rust-lang/rust.vim'
-Plug 'slim-template/vim-slim'
+Plug 'quramy/tsuquyomi'
+Plug 'raimondi/delimitMate'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/bats.vim'
+Plug 'yggdroot/indentLine'
 
 call plug#end()
 
 """ use fzf and map it to ctrl + p
 set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :Files<cr>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 set autoindent " autoindents code
 set autoread " auto reload changed files
@@ -68,8 +59,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ colors
-silent! colorscheme Tomorrow-Night
-hi Normal ctermbg=none
+silent! colorscheme palenight
+set termguicolors
+let g:palenight_terminal_italics=1
+hi! Normal ctermbg=NONE guibg=NONE
 hi Pmenu ctermfg=white ctermbg=none cterm=none
 hi PmenuSel ctermfg=11 ctermbg=none cterm=none
 hi StatusLine cterm=none ctermbg=none ctermfg=white
@@ -112,3 +105,6 @@ hi Type cterm=italic
 
 set dictionary+=~/.vimwords
 set complete+=k
+
+let g:netrw_localrmdir = 'rm -r' " allow for the deletion of non-empty directories
+let g:netrw_banner = 0 " hide the banner in netrw

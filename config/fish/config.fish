@@ -7,6 +7,3 @@ alias push="git push origin head"
 alias s="git status"
 
 set -gx EDITOR vim
-
-# fallback to npx
-source (npx --shell-auto-fallback fish | psub)

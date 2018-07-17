@@ -7,7 +7,7 @@ mv ~/.config ~/.config-bak
 dir=~/dotfiles
 
  # list of files/folders to symlink in homedir
-files="vim gitconfig gitignore_global vimrc config"
+files="vim gitconfig gitignore_global vimrc config gemrc rspec"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"

@@ -103,7 +103,7 @@ hi htmlArg cterm=italic
 hi Comment cterm=italic
 hi Type cterm=italic
 
-set dictionary+=~/.vimwords
+set dictionary+=~/.vim/keywords.txt
 set complete+=k
 
 let g:netrw_localrmdir = 'rm -r' " allow for the deletion of non-empty directories

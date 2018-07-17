@@ -5,5 +5,6 @@ config/fish/fishd*
 config/fish/functions
 config/fisherman
 vim/.netrwhist
-vim/bundle
+vim/plugged
+vim/autoload
 vim/vim

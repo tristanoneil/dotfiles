@@ -17,6 +17,7 @@ Plug 'raimondi/delimitMate'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'yggdroot/indentLine'
 

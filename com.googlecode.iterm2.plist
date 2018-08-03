@@ -389,7 +389,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -411,11 +411,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1169 117 445 165 0 0 1680 1027 </string>
+	<string>1169 117 445 94 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>80 557 1018 447 0 0 1680 1027 </string>
+	<string>160 929 1018 447 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 84 1680 943 0 0 1680 1027 </string>
+	<string>0 102 2560 1315 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1154,10 +1154,20 @@
 			<string>/Users/tristanoneil</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
+	<integer>1</integer>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>3948ED2E-C30B-4C25-B27C-3E6ACBF0ABA9</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncRecordedVariableNames</key>
@@ -1183,6 +1193,7 @@
 			<string>session.tty</string>
 			<string>session.terminalWindowName</string>
 			<string>session.autoLogId</string>
+			<string>session.lastCommand</string>
 			<string>session.pid</string>
 			<string>session.presentationName</string>
 			<string>session.columns</string>
@@ -1190,18 +1201,23 @@
 		<key>2</key>
 		<array>
 			<string>currentSession</string>
+			<string>currentSession.session.columns</string>
+			<string>currentSession.session.termid</string>
 			<string>currentSession.session.pid</string>
 			<string>currentSession.session.autoName</string>
 			<string>currentSession.session.name</string>
+			<string>currentSession.session.path</string>
 			<string>currentSession.session.rows</string>
 			<string>currentSession.session.terminalWindowName</string>
 			<string>currentSession.session.tty</string>
+			<string>currentSession.session.lastCommand</string>
 			<string>currentSession.session.jobName</string>
 			<string>currentSession.session.presentationName</string>
 			<string>tmuxWindow</string>
 			<string>currentSession.session.terminalIconName</string>
+			<string>currentSession.session.hostname</string>
 			<string>currentSession.session.jobPid</string>
-			<string>currentSession.session.columns</string>
+			<string>currentSession.session.username</string>
 		</array>
 		<key>4</key>
 		<array>
@@ -1262,11 +1278,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-28T21:39:11Z</date>
+	<date>2018-07-30T11:37:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowMetalFPSmeter</key>
-	<true/>
+	<false/>
 	<key>StretchTabsToFillBar</key>
 	<true/>
 	<key>TabStyle</key>

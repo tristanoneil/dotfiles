@@ -41,6 +41,7 @@ set number " display line numbers
 set ruler " show line number and column in the status line
 set shiftwidth=2 " set the autoindent to be 2 chars
 set tabstop=2 " set the tab spacing to be 2 chars
+set mouse=a " enable mouse support
 syntax enable " enable syntax highlighting
 
 """ handling invisible characters

@@ -48,11 +48,12 @@ windows:
       panes:
         - bundle exec rails s
         - bundle exec sidekiq
-        - mailhog
   - frontend:
       panes:
-        - ./node_modules/.bin/karma start --no-auto-watch --browsers ChromeHeadless --port 9876
         - npm run serve
   - editor:
       panes:
         - vim
+  - workspace:
+      panes:
+        -

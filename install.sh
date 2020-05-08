@@ -20,6 +20,9 @@ for file in $files; do
   ln -s $dir/$file ~/.$file
 done
 
+# setup profile
+tic xterm-256color-italic.terminfo
+
 # install fisherman
 curl -Lo config/fish/functions/fisher.fish --create-dirs git.io/fisherman
 exec fish

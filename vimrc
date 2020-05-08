@@ -1,3 +1,5 @@
+:scriptencoding utf-8
+
 """ use bash set shell=bash\ --login
 
 if empty(glob('~/.vim/autoload/plug.vim'))

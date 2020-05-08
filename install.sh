@@ -22,7 +22,7 @@ done
 
 # install fisherman
 curl -Lo config/fish/functions/fisher.fish --create-dirs git.io/fisherman
-fish config/fish/functions/fisher.fish
+exec fish
 
 # install fish plugins
 fisher up

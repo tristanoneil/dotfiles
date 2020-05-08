@@ -25,7 +25,7 @@ tic xterm-256color-italic.terminfo
 
 # install fisherman
 curl -Lo config/fish/functions/fisher.fish --create-dirs git.io/fisherman
-exec fish
+source ~/.config/fish/config.fish
 
 # install fish plugins
 fisher up

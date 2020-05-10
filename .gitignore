@@ -1,9 +1,8 @@
 config/configstore
 config/fish/completions
 config/fish/fish_history
+config/fish/fish_variables
 config/fish/fishd*
-config/fish/functions
-config/fisherman
 vim/.netrwhist
 vim/plugged
 vim/autoload

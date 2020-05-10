@@ -23,12 +23,5 @@ done
 # setup profile
 tic xterm-256color-italic.terminfo
 
-# install fisherman
-curl -Lo config/fish/functions/fisher.fish --create-dirs git.io/fisherman
-source ~/.config/fish/config.fish
-
-# install fish plugins
-fisher up
-
 # install vundle plugins
 vim +PlugInstall +qall

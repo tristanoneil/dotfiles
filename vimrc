@@ -10,6 +10,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dense-analysis/ale'
 Plug 'djoshea/vim-autoread'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'janko-m/vim-test'
@@ -44,6 +45,7 @@ set ruler " show line number and column in the status line
 set shiftwidth=2 " set the autoindent to be 2 chars
 set tabstop=2 " set the tab spacing to be 2 chars
 syntax enable " enable syntax highlighting
+set confirm
 
 """ handling invisible characters
 set list " show invisible characters
@@ -92,7 +94,7 @@ function! XTermPasteBegin()
 endfunction
 
 """ disable quote concealing in JSON
-let g:vim_json_syntax_conceal = 0
+let g:vim_json_conceal=0
 
 """ vim-test mappings
 nmap <silent> <leader>s :TestNearest<CR>
@@ -111,3 +113,11 @@ set complete+=k
 
 let g:netrw_localrmdir = 'rm -r' " allow for the deletion of non-empty directories
 let g:netrw_banner = 0 " hide the banner in netrw
+
+" ale
+let g:ale_fixers = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_text_changed = 0

@@ -1,7 +1,7 @@
 # /Users/tristanoneil/.config/tmuxinator/maji.yml
 
-name: maji
-root: ~/src/maji
+name: picha
+root: ~/src/cw-picha
 
 # Optional tmux socket
 # socket_name: foo
@@ -46,11 +46,8 @@ windows:
   - backend:
       layout: tiled
       panes:
-        - bundle exec rails s
-        - bundle exec sidekiq -q mailers default
-  - frontend:
-      panes:
-        - npm run serve
+        - bundle exec rails s -p 4000
+        - bundle exec sidekiq
   - editor:
       panes:
         - vim

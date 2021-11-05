@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
 Plug 'djoshea/vim-autoread'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'quramy/tsuquyomi'
@@ -23,6 +23,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'yggdroot/indentLine'
+Plug 'jsit/disco.vim'
+Plug 'lifepillar/vim-solarized8'
 
 call plug#end()
 
@@ -30,6 +32,7 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let g:fzf_preview_window = []
 
 set autoindent " autoindents code
 set autoread " auto reload changed files
@@ -64,13 +67,16 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/cache/*
 
 """ colors
-silent! colorscheme palenight
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
-let g:palenight_terminal_italics=1
+set background=light
+colorscheme solarized8
+
 hi! Normal ctermbg=NONE guibg=NONE
-hi Pmenu ctermfg=white ctermbg=none cterm=none
+hi Pmenu ctermfg=grey ctermbg=none cterm=none
 hi PmenuSel ctermfg=11 ctermbg=none cterm=none
-hi StatusLine cterm=none ctermbg=none ctermfg=white
+hi StatusLine cterm=none ctermbg=none ctermfg=grey
 hi StatusLineNC cterm=none ctermbg=none
 hi VertSplit ctermbg=none
 set fillchars=stl:—,stlnc:—,vert:│
@@ -103,11 +109,6 @@ nmap <silent> <leader>t :TestFile<CR>
 set splitbelow
 set splitright
 
-" Make html args, comments and keywords italic
-hi htmlArg cterm=italic
-hi Comment cterm=italic
-hi Type cterm=italic
-
 set dictionary+=~/.vim/keywords.txt
 set complete+=k
 
@@ -116,8 +117,10 @@ let g:netrw_banner = 0 " hide the banner in netrw
 
 " ale
 let g:ale_fixers = ['prettier']
+let g:ale_linters = {
+\   'ruby': ['rubocop'],
+\}
 let g:ale_fix_on_save = 1
-let g:ale_lint_on_save = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_text_changed = 0
+let g:ale_ruby_rubocop_executable = 'bundle'
+
+let test#ruby#rspec#executable = 'bundle exec rspec'

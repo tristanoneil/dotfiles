@@ -14,6 +14,7 @@ Plug 'dense-analysis/ale'
 Plug 'djoshea/vim-autoread'
 Plug 'lifepillar/vim-solarized8'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'quramy/tsuquyomi'
 Plug 'raimondi/delimitMate'
@@ -29,7 +30,7 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 """ use fzf and map it to ctrl + p
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/bin/fzf
 nnoremap <c-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = []

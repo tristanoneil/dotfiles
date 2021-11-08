@@ -9,10 +9,13 @@ alias s="git status"
 alias go="tmuxinator start maji"
 
 set -gx EDITOR vim
-# set -gx TERM xterm-256color-italic
 set -gx WORKON_PATH /Users/tristanoneil/src/workon
 set fish_greeting
 set -gx RUBYOPT ''
+
+eval (/opt/homebrew/bin/brew shellenv)
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 if type -q rbenv
   source (rbenv init - | psub)

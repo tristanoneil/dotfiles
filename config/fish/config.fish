@@ -6,10 +6,8 @@ alias dev="cd ~/src"
 alias pull="git pull origin HEAD"
 alias push="git push origin head"
 alias s="git status"
-alias go="tmuxinator start maji"
 
 set -gx EDITOR vim
-set -gx WORKON_PATH /Users/tristanoneil/src/workon
 set fish_greeting
 set -gx RUBYOPT ''
 

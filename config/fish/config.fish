@@ -6,6 +6,7 @@ alias dev="cd ~/src"
 alias pull="git pull origin HEAD"
 alias push="git push origin head"
 alias s="git status"
+alias vim="nvim"
 
 set -gx EDITOR vim
 set fish_greeting
@@ -18,3 +19,8 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 if type -q rbenv
   source (rbenv init - | psub)
 end
+
+set -gx FZF_DEFAULT_OPTS '--color=fg:#aaaaaa,bg:#ffffff,hl:#0366d6
+ --color=fg+:#aaaaaa,bg+:#ffffff,hl+:#2188ff
+ --color=info:#afaf87,prompt:#d7005f,pointer:#6f42c1
+ --color=marker:#22863a,spinner:#6f42c1,header:#87afaf'

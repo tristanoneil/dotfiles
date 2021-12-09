@@ -1,0 +1,18 @@
+name: calendly
+root: ~/src/calendly
+
+startup_window: editor
+
+windows:
+  - app:
+      layout: tiled
+      panes:
+        - bundle exec rails s
+        - bundle exec sidekiq
+        - bin/webpack-dev-server
+  - editor:
+      panes:
+        - nvim
+  - workspace:
+      panes:
+        -

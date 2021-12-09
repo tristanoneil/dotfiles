@@ -22,6 +22,8 @@ Plug 'tpope/vim-surround'
 Plug 'yggdroot/indentLine'
 Plug 'jsit/disco.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jgdavey/tslime.vim'
 
 call plug#end()
 
@@ -94,7 +96,7 @@ let g:netrw_localrmdir = 'rm -r' " allow for the deletion of non-empty directori
 let g:netrw_banner = 0 " hide the banner in netrw
 
 " ale
-let g:ale_fixers = ['prettier']
+let g:ale_fixers = ['rubocop']
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \}
@@ -102,3 +104,4 @@ let g:ale_fix_on_save = 1
 let g:ale_ruby_rubocop_executable = 'bundle'
 
 let test#ruby#rspec#executable = 'bundle exec rspec'
+let test#strategy = 'tslime'

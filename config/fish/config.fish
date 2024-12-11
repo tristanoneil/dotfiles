@@ -7,8 +7,9 @@ alias pull="git pull origin HEAD"
 alias push="git push origin head"
 alias s="git status"
 alias vim="nvim"
+alias kill-chrome="pkill -f 'Chrome.*--disable-background-networking'"
 
-set -gx EDITOR vim
+set -gx EDITOR nvim
 set fish_greeting
 set -gx RUBYOPT ''
 
@@ -20,7 +21,7 @@ if type -q rbenv
   source (rbenv init - | psub)
 end
 
-set -gx FZF_DEFAULT_OPTS '--color=fg:#aaaaaa,bg:#ffffff,hl:#0366d6
- --color=fg+:#aaaaaa,bg+:#ffffff,hl+:#2188ff
- --color=info:#afaf87,prompt:#d7005f,pointer:#6f42c1
- --color=marker:#22863a,spinner:#6f42c1,header:#87afaf'
+set -x PATH ./node_modules/.bin $PATH
+set -gx PATH (pwd)/bin $PATH
+
+set -U fish_user_paths ~/.asdf/shims ~/.asdf/bin $fish_user_paths

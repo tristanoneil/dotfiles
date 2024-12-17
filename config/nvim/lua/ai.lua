@@ -4,10 +4,10 @@ require('nvim-web-devicons').setup({
 
 require('avante_lib').load()
 require('avante').setup({
-  provider = "openai",
+  provider = "copilot",
   auto_suggestions_provider = "copilot",
   behaviour = {
-    auto_suggestions = true,
+    auto_suggestions = false,
   }
 })
 

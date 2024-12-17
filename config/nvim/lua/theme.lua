@@ -17,8 +17,9 @@ vim.cmd.colorscheme "rose-pine"
 -- Base
 
 vim.api.nvim_set_hl(0, 'Normal', { ctermbg = 'none', bg = 'none' })
+vim.api.nvim_set_hl(0, 'FloatBorder', { ctermbg = 'none', bg = 'none' })
 vim.api.nvim_set_hl(0, 'Pmenu', { ctermfg = 'grey', ctermbg = 'none', bold = false })
-vim.api.nvim_set_hl(0, 'PmenuSel', { ctermfg = 11, ctermbg = 'none', bold = false })
+vim.api.nvim_set_hl(0, 'PmenuSel', { fg = '#f6c177' })
 vim.api.nvim_set_hl(0, 'StatusLine', { bold = false, bg = 'none', fg = 'grey' })
 vim.api.nvim_set_hl(0, 'StatusLineNC', { bold = false, bg = 'none', fg = 'lightgrey' })
 vim.api.nvim_set_hl(0, 'VertSplit', { bg = 'none' })
@@ -43,12 +44,6 @@ end
 
 -- Avante
 
-vim.api.nvim_set_hl(0, "AvanteTitle", { fg = "#1e222a", bg = "NONE" })
-vim.api.nvim_set_hl(0, "AvanteReversedTitle", { fg = "#ffffff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "AvanteSubtitle", { fg = "#1e222a", bg = "NONE" })
-vim.api.nvim_set_hl(0, "AvanteReversedSubtitle", { fg = "#ffffff", bg = "NONE" })
-vim.api.nvim_set_hl(0, "AvanteThirdTitle", { fg = "#1e222a", bg = "NONE" })
-vim.api.nvim_set_hl(0, "AvanteReversedThirdTitle", { fg = "#ffffff", bg = "NONE" })
 vim.api.nvim_set_hl(0, "AvanteConflictCurrent", { fg = "#5C9897", bg = "NONE" })
 vim.api.nvim_set_hl(0, "AvanteConflictIncoming", { fg = "#E56C8F", bg = "NONE" })
 vim.api.nvim_set_hl(0, "AvanteConflictCurrentLabel", { fg = "#ffffff", bg = "NONE", bold = false })

@@ -1,3 +1,5 @@
+local actions = require("telescope.actions")
+
 require('telescope').setup({
   pickers = {
     find_files = {
@@ -15,6 +17,11 @@ require('telescope').setup({
       "spec/cassettes",
       "vendor",
       "public"
+    },
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close,
+      },
     },
   }
 })

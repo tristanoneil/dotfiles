@@ -33,6 +33,7 @@ Plug 'HakonHarnes/img-clip.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'slim-template/vim-slim'
+Plug 'stevearc/conform.nvim'
 
 call plug#end()
 ]]
@@ -43,7 +44,7 @@ require('startup')
 require('ai')
 require('space')
 require('keymaps')
-require('ale')
+require('format')
 require('tests')
 require('syntax')
 
@@ -64,6 +65,9 @@ vim.opt.number = true
 vim.opt.autoread = true
 vim.opt.fillchars:append({ eob = " " })
 vim.g.netrw_banner = 0
+vim.opt.pumblend = 0
+vim.opt.winblend = 0
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
   command = "if mode() != 'c' | checktime | endif",
   pattern = { "*" },
@@ -75,4 +79,9 @@ vim.cmd [[autocmd BufWritePre * %s/\s\+$//e]]
 -- Alternate file creation
 vim.cmd [[
   command AC :execute "e " . eval('rails#buffer().alternate()')
+]]
+
+vim.cmd [[
+  let &t_SI .= "\<Esc>[?2004h"
+  let &t_EI .= "\<Esc>[?2004l"
 ]]

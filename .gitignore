@@ -3,7 +3,8 @@ config/fish/completions
 config/fish/fish_history
 config/fish/fish_variables
 config/fish/fishd*
-vim/.netrwhist
-vim/plugged
-vim/autoload
-vim/vim
+config/nvim/plugged
+config/nvim/autoload
+config/github-copilot
+config/yarn
+config/zed

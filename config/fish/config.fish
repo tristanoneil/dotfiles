@@ -1,7 +1,7 @@
 alias am="git commit --amend"
 alias b="git branch"
 alias co="git checkout"
-alias cop="rubocop (git diff HEAD --name-only --diff-filter=MA & git diff master..HEAD --name-only --diff-filter=MA | sort | uniq)"
+alias cop="bundle exec rubocop (git diff HEAD --name-only --diff-filter=MA & git diff master..HEAD --name-only --diff-filter=MA | sort | uniq)"
 alias dev="cd ~/src"
 alias pull="git pull origin HEAD"
 alias push="git push origin head"

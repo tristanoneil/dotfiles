@@ -1,0 +1,14 @@
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+alt - s : sh -c "yabai -m query --spaces --space | jq -r '.type' | grep -q 'stack' && yabai -m space --layout bsp || yabai -m space --layout stack"
+
+alt - b : open -a Safari
+alt - t : open -a Ghostty
+alt - i : open -a Messages
+alt - m : open -a Mail
+alt - r : open -a Reminders
+alt - n : open -a Notes
+alt - c : open -a Calendar

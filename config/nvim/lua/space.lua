@@ -3,7 +3,8 @@ local actions = require("telescope.actions")
 require('telescope').setup({
   pickers = {
     find_files = {
-      disable_devicons = true
+      disable_devicons = true,
+      hidden = true
     },
     buffers = {
       disable_devicons = true
@@ -16,7 +17,11 @@ require('telescope').setup({
     file_ignore_patterns = {
       "spec/cassettes",
       "vendor",
-      "public"
+      "public",
+      "^%.git/",
+      "^%.git$",
+      "%.DS_Store$",
+      "^node_modules/"
     },
     mappings = {
       i = {

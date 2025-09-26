@@ -6,6 +6,18 @@ require('conform').setup({
     ruby = { 'prettierd', 'prettier', stop_after_first = true },
     javascript = { 'prettierd', 'prettier', stop_after_first = true },
     javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+    typescript = { 'prettierd', 'prettier', stop_after_first = true },
+    typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+    hcl = { 'terraform_fmt' },
+    terraform = { 'terraform_fmt' },
+    ["terraform-vars"] = { 'terraform_fmt' },
+    sh = { 'shfmt' },
+    bash = { 'shfmt' },
+  },
+  formatters = {
+    shfmt = {
+      prepend_args = { '-i', '2', '-ci' },
+    },
   },
   format_on_save = {
     timeout_ms = 500,

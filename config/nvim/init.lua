@@ -34,6 +34,8 @@ Plug 'goolord/alpha-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'slim-template/vim-slim'
 Plug 'stevearc/conform.nvim'
+Plug 'andymass/vim-matchup'
+Plug 'towolf/vim-helm'
 
 call plug#end()
 ]]

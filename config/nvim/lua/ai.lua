@@ -12,4 +12,3 @@ require('avante').setup({
 })
 
 vim.g.copilot_filetypes = { markdown = true, gitcommit = true }
-vim.g.copilot_workspace_folders = { "~/src/maji" }

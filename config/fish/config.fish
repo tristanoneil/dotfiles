@@ -19,10 +19,6 @@ eval (/opt/homebrew/bin/brew shellenv)
 
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
-if type -q rbenv
-  source (rbenv init - | psub)
-end
-
 set -Ua fish_user_paths ./node_modules/.bin $fish_user_paths
 set -Ua fish_user_paths (npm config get prefix)/bin $fish_user_paths
 set -Ua fish_user_paths (pwd)/bin $fish_user_paths

@@ -33,7 +33,7 @@
   autosetuprebase = always
 
 [alias]
-  cleanup = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  cleanup = "!b=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@') && git checkout $b && git branch --merged | grep -v \"\\*\\|$b\" | xargs -r git branch -d"
 
 [merge]
   tool = opendiff
@@ -42,7 +42,7 @@
   enabled = true
 
 [credential]
-  helper = osxkeychain
+	helper = store
 
 [rebase]
   autosquash = true

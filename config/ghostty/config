@@ -1,0 +1,11 @@
+font-size = 16
+window-padding-x = 10
+window-padding-y = 10
+title = " "
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
+confirm-close-surface = false
+keybind = shift+enter=text:\x1b\r
+keybind = super+r=reload_config
+window-save-state = always
+shell-integration = fish
